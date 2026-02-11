@@ -10,7 +10,7 @@ replace github.com/compose-spec/compose-go/v2 => github.com/compose-spec/compose
 
 // replace github.com/meshery/schemas v0.8.92 => ../schemas
 
-// replace github.com/meshery/meshkit v0.8.54 => ../meshkit
+// replace github.com/meshery/meshkit => ../meshkit
 
 // replace github.com/meshery/meshsync v0.8.26 => ../meshsync
 
@@ -49,10 +49,11 @@ require (
 	github.com/lib/pq v1.10.9
 	github.com/manifoldco/promptui v0.9.0
 	github.com/meshery/meshery-operator v0.8.11
-	github.com/meshery/meshkit v0.8.63
+	github.com/meshery/meshkit v0.8.64
 	github.com/meshery/meshsync v0.8.26
-	github.com/meshery/schemas v0.8.96
+	github.com/meshery/schemas v0.8.116
 	github.com/nsf/termbox-go v1.1.1
+	github.com/oapi-codegen/runtime v1.1.2
 	github.com/olekukonko/tablewriter v1.1.0
 	github.com/open-policy-agent/opa v1.11.0
 	github.com/pkg/browser v0.0.0-20240102092130-5ac0b6a4141c
@@ -323,7 +324,6 @@ require (
 	github.com/nats-io/nkeys v0.4.12 // indirect
 	github.com/nats-io/nuid v1.0.1 // indirect
 	github.com/novln/docker-parser v1.0.0 // indirect
-	github.com/oapi-codegen/runtime v1.1.2 // indirect
 	github.com/oklog/ulid v1.3.1 // indirect
 	github.com/olekukonko/errors v1.1.0 // indirect
 	github.com/olekukonko/ll v0.0.9 // indirect

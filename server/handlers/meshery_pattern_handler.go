@@ -961,7 +961,7 @@ func (h *Handler) DownloadMesheryPatternHandler(
 		go h.config.EventBroadcaster.Publish(userID, event)
 		_ = provider.PersistEvent(*event, nil)
 
-		pretifiedName := strings.ToLower(strings.Replace(pattern.Name, " ", "", -1)) // ensures that tag validation passes
+		pretifiedName := strings.ToLower(strings.ReplaceAll(pattern.Name, " ", "")) // ensures that tag validation passes
 		tmpOCITarFilePath := filepath.Join(tmpDir, pretifiedName+".tar")
 		err = oci.SaveOCIArtifact(ociImg, tmpOCITarFilePath, pretifiedName)
 		if err != nil {
@@ -1862,7 +1862,7 @@ func mapModelRelatedData(reg *meshmodel.RegistryManager, patternFile *pattern.Pa
 
 		comp.Model = wc.Model
 		if wc.Model.Registrant.Status == "" {
-			comp.Model.Registrant.Status = connection.Registered
+			comp.Model.Registrant.Status = connection.ConnectionStatusRegistered
 		}
 		comp.Format = wc.Format
 		comp.Version = wc.Version
